@@ -59,4 +59,26 @@ class Movie extends Model
     {
         return $this->belongsToMany(Genre::class, $this->relationshipTable, 'movie_id', 'genre_id');
     }
+
+
+    public function scopeFilters($query)
+    {
+        // apply category filter if exists
+        if (request()->has('category_id')){
+            $query->whereHas('genres', function($query){
+               $query->where('id', request()->get('category_id'));
+            });
+        }
+
+        // apply order if exists
+        if (request()->has('order')){
+
+            if (request()->has('dir')){
+                $query->orderBy(request()->get('order'), request()->get('dir'));
+            }
+            // if no dir apply ascending order
+            $query->orderBy(request()->get('order'), 'ASC');
+        }
+
+    }
 }

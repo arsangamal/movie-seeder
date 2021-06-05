@@ -66,7 +66,8 @@ class Movie extends Model
         // apply category filter if exists
         if (request()->has('category_id')){
             $query->whereHas('genres', function($query){
-               $query->where('id', request()->get('category_id'));
+                $table = config('movie-seeder.tables.genres-table-name');
+                $query->where("{$table}.id", request()->get('category_id'));
             });
         }
 

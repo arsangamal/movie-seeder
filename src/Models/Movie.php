@@ -74,7 +74,7 @@ class Movie extends Model
         // apply order if exists
         if (request()->has('order')){
 
-            if (request()->has('dir')){
+            if (request()->has('dir') && in_array(request()->get('dir'), ['asc', 'desc'])){
                 $query->orderBy(request()->get('order'), request()->get('dir'));
             }
             // if no dir apply ascending order

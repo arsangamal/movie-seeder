@@ -1,7 +1,7 @@
 {
     "name": "arsangamal/movie-seeder",
-    "description": ":package_description",
-    "license": "license",
+    "description": "Seeding movies from TMDB has never been easier",
+    "license": "proprietary",
     "authors": [
         {
             "name": "Arsan Gamal",

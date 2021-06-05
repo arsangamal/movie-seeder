@@ -16,7 +16,7 @@ return [
      *
      * @example 100
      */
-    'num_of_records' => 3,
+    'num_of_records' => 100,
 
 
     /**
@@ -24,7 +24,7 @@ return [
      *
      * @example '123456789abcdefgh'
      */
-    'api_key' => '4105b68ec0eeb3909b72ba37923941b6',
+    'api_key' => '',
 
 
     'tables' => [

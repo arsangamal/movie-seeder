@@ -1,9 +1,13 @@
 # MovieSeeder
 
 
-This is where your description should go. Take a look at [contributing.md](contributing.md) to see a to do list.
+Seeding movies from TMDB has never been easier
+
 
 ## Installation
+Note this is package for laravel 5.8
+
+<br/>
 
 Via Composer
 
